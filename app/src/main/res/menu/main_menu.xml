@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/itemAluguel"
+        android:title="@string/aluguel_label" />
+    <item
+        android:id="@+id/itemAluno"
+        android:title="@string/aluno_label" />
+    <item
+        android:id="@+id/itemLivro"
+        android:title="@string/livro_label" />
+    <item
+        android:id="@+id/itemRevista"
+        android:title="@string/revista_label" />
+</menu>

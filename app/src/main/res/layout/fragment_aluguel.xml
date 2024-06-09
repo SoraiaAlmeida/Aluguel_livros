@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutRental"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AluguelFragment">
+
+    <TextView
+        android:id="@+id/tvTitutloAluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluguel_label"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAluguelAlunoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluguel_aluno_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvAluguelExemplarLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitutloAluguel" />
+
+    <Spinner
+        android:id="@+id/spinnerAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAluguelAlunoLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvAluguelAlunoLabel" />
+
+    <TextView
+        android:id="@+id/tvAluguelExemplarLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginBottom="109dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluguel_exemplar_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etDataAluguelRetorno"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerExemplar"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitutloAluguel" />
+
+    <Spinner
+        android:id="@+id/spinnerExemplar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAluguelExemplarLabel"
+        app:layout_constraintEnd_toEndOf="@+id/btnBuscarAluguel"
+        app:layout_constraintStart_toStartOf="@+id/spinnerAluno" />
+
+    <TextView
+        android:id="@+id/tvDataAluguelRetiradaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="79dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluguel_dataRetirada_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDataAluguelDevolucaoLabel"
+        app:layout_constraintEnd_toStartOf="@+id/etDataAluguelRetirada"
+        app:layout_constraintTop_toTopOf="@+id/tvAluguelExemplarLabel" />
+
+    <EditText
+        android:id="@+id/etDataAluguelRetirada"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="9dp"
+        android:ems="10"
+        android:hint="@string/aluguel_dataRetirada"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvDataAluguelRetiradaLabel"
+        app:layout_constraintEnd_toEndOf="@+id/etDataAluguelRetorno" />
+
+    <TextView
+        android:id="@+id/tvDataAluguelDevolucaoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluguel_dataRetorno_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/etDataAluguelRetorno"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etDataAluguelRetorno"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/aluguel_dataRetorno"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvDataAluguelDevolucaoLabel"
+        app:layout_constraintEnd_toEndOf="@+id/btnAlterarAluguel"
+        app:layout_constraintStart_toEndOf="@+id/btnAlterarAluguel" />
+
+    <Button
+        android:id="@+id/btnBuscarAluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/database_buscar"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerExemplar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnDeletarAluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33dp"
+        android:text="@string/database_deletar"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAlterarAluguel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnAlterarAluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/database_alterar"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btnInserirAluguel"
+        app:layout_constraintTop_toBottomOf="@+id/etDataAluguelRetorno" />
+
+    <Button
+        android:id="@+id/btnInserirAluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:text="@string/database_inserir"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAlterarAluguel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnListarAluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/database_listar"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btnAlterarAluguel"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlterarAluguel" />
+
+    <TextView
+        android:id="@+id/tvSaídaAluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_marginEnd="41dp"
+        android:gravity="center_vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnListarAluguel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

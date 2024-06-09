@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Aluguel de livros</string>
+
+    <string name="app_text">Olá, Bem vindo!</string>
+   <string name="app_description">Para melhor utilização do APP, por favor, utilize o menu."</string>
+    <string name="database_buscar">Buscar</string>
+    <string name="database_inserir">Inserir</string>
+    <string name="database_alterar">Alterar</string>
+    <string name="database_deletar">Deletar</string>
+    <string name="database_listar">Listar</string>
+
+   <string name="aluguel_label">Aluguel</string>
+  <string name="aluguel_aluno_label">Aluno:</string>
+  <string name="aluguel_exemplar_label">Exemplar:</string>
+  <string name="aluguel_dataRetirada_label">Retirada:</string>
+  <string name="aluguel_dataRetirada">2024–01–01</string>
+  <string name="aluguel_dataRetorno_label">Devolução:</string>
+  <string name="aluguel_dataRetorno">2024–01–15</string>
+
+  <string name="aluno_label">Aluno</string>
+  <string name="aluno_id_label">Id:</string>
+  <string name="aluno_id">001</string>
+  <string name="aluno_name_label">Nome:</string>
+  <string name="aluno_name">Soraia</string>
+  <string name="aluno_email_label">Email:</string>
+  <string name="aluno_email">soraia@sememail.com</string>
+
+    <string name="exemplar_id_label">Id:</string>
+    <string name="exemplar_id">001</string>
+    <string name="exemplar_nome_label">Nome:</string>
+    <string name="exemplar_nome">A coragem de ser imperfeito</string>
+    <string name="exemplar_paginas_label">Páginas:</string>
+    <string name="exemplar_paginas_">200</string>
+
+    <string name="livro_label">Livro</string>
+    <string name="livro_isbn_label">ISBN:</string>
+    <string name="livro_isbn">978-85-431-0433-1</string>
+    <string name="livro_edition_label">Edição:</string>
+    <string name="livro_edition">1</string>
+
+    <string name="revista_label">Revista</string>
+    <string name="revista_issn_label">ISSN:</string>
+    <string name="revista_issn">585-410-10</string>
+
+</resources>

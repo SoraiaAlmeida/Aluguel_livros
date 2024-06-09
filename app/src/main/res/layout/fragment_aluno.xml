@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutStudent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlunoFragment">
+
+    <TextView
+        android:id="@+id/tvTitutloAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluno_label"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIdAlunoLabel"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="128dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluno_id_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/edIdAluno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edIdAluno"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="54dp"
+        android:ems="10"
+        android:hint="@string/aluno_id"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBuscarAluno"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarAluno"
+        app:layout_constraintStart_toEndOf="@+id/tvIdAlunoLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvIdAlunoLabel" />
+
+    <Button
+        android:id="@+id/btnBuscarAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/database_buscar"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edNomeAluno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edIdAluno" />
+
+    <TextView
+        android:id="@+id/tvIdNomeAlunoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="80dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluno_name_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlunoEmailLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvIdAlunoLabel" />
+
+    <EditText
+        android:id="@+id/edNomeAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:ems="10"
+        android:hint="@string/aluno_name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvIdNomeAlunoLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvIdNomeAlunoLabel" />
+
+    <TextView
+        android:id="@+id/tvAlunoEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="7dp"
+        android:gravity="center_vertical"
+        android:text="@string/aluno_email_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edEmailAluno"
+        app:layout_constraintEnd_toStartOf="@+id/edNomeAluno"
+        app:layout_constraintStart_toStartOf="@+id/btnInserirAluno" />
+
+    <EditText
+        android:id="@+id/edEmailAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="290dp"
+        android:ems="10"
+        android:hint="@string/aluno_email"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/tvAlunoEmailLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnInserirAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/database_inserir"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAlterarAluno"
+        app:layout_constraintEnd_toStartOf="@+id/btnAlterarAluno"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAlterarAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/database_alterar"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeletarAluno"
+        app:layout_constraintStart_toEndOf="@+id/btnInserirAluno"
+        app:layout_constraintTop_toBottomOf="@+id/edEmailAluno" />
+
+    <Button
+        android:id="@+id/btnDeletarAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/database_deletar"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAlterarAluno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAlterarAluno" />
+
+    <Button
+        android:id="@+id/btnListarAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/database_buscar"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btnAlterarAluno"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlterarAluno" />
+
+    <TextView
+        android:id="@+id/tvResultadoAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:gravity="center_vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
